@@ -22,7 +22,8 @@
   "homepage": "https://github.com/MehmetOCAL2347/amazon-analysis#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "xlsx": "^0.17.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
