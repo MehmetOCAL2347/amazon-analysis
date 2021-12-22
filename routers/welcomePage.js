@@ -1,11 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const {readInputFile} = require("../controllers/welcomePageMethods");
+const { excelFileReader } = require("../middlewares/readExcelFile");
+const { readInputFile } = require("../controllers/welcomePageMethods");
 
-router.get("/", (req, res) =>{
-    res.send("Welcome Page");
-});
-
-router.post("/read-input-file", readInputFile);
+router.post("/read-input-file", excelFileReader.single("readFile"), readInputFile);
 
 module.exports = router;
