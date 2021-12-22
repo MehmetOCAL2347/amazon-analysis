@@ -6,6 +6,7 @@ const app = express();
 const allRouters = require("./routers/allRouters");
 const PORT = process.env.PORT;
 
+app.use(express.json());
 app.use("/", allRouters);
 
 app.listen(PORT, ()=>{
